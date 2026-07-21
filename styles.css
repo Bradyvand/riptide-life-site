@@ -561,3 +561,28 @@ footer .tagline { font-style: italic; margin-bottom: 0.5rem; }
     .nav-links { gap: 1rem; font-size: 0.7rem; }
     .hero-text h1 { font-size: 2.2rem; }
 }
+
+
+
+/* --- Visual & UX adjustments --- */
+
+/* Hero diagram: add top breathing room so the circles and connecting line
+   aren't clipped at the top of the dark graphic box on desktop viewports */
+.hero-visual {
+        padding-top: 2.5rem;
+}
+
+/* Hero subheadline: keep it bright white so it pops against the navy background */
+.hero-text p {
+        color: #ffffff;
+}
+
+/* Case study disclaimer: subtle muted footer-style note instead of italic body text */
+.case-disclaimer {
+        font-style: normal;
+        font-size: 0.8rem;
+        color: #9aa7b5;
+        text-align: center;
+        max-width: 700px;
+        margin: 1.5rem auto 0;
+}
