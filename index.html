@@ -1,113 +1,186 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riptide Life — Calm, Verified Help When You're Stuck</title>
-  <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riptide Life — Calm, Verified Help When You're Stuck</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  <nav class="navbar">
-    <div class="logo">RIPTIDE<span>LIFE</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">RIPTIDE<span>LIFE</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>RIPTIDE LIFE</h1>
-      <p>Calm, verified help for the moments you feel stuck.</p>
-      <div>
-        <a href="contact.html" class="btn btn-primary">Get Started</a>
-        <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
-      </div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>RIPTIDE LIFE</h1>
+    <p>Calm, verified help for the moments you feel stuck.</p>
+    <div>
+      <a href="#" onclick="openContactModal(event)" class="btn btn-primary">Submit Your Issue</a>
+      <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
     </div>
-    <div class="hero-visual"></div>
-  </section>
-
-  <div class="band-quote">
-    "A riptide pulls you away from shore fast — and panic makes it worse. The way out isn't more thrashing.
-    It's calm, experienced guidance from someone who's swum this exact current before."
+    <div class="trust-row">
+      <span>&#10003; Confidential &amp; Secure</span>
+      <span>&#10003; Vetted Technical &amp; Ops Experts</span>
+      <span>&#10003; No Upfront Fees</span>
+    </div>
   </div>
+  <div class="hero-visual">
+    <svg class="hero-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing a problem being matched to a verified expert">
+      <circle cx="55" cy="100" r="34" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-width="2"/>
+      <text x="55" y="95" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Segoe UI, sans-serif">Your</text>
+      <text x="55" y="110" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Segoe UI, sans-serif">Issue</text>
+      <line x1="90" y1="100" x2="170" y2="100" stroke="#ff7a1a" stroke-width="3" stroke-dasharray="6 6"/>
+      <circle cx="205" cy="100" r="34" fill="#ff7a1a" fill-opacity="0.9"/>
+      <text x="205" y="95" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Segoe UI, sans-serif">Verified</text>
+      <text x="205" y="110" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Segoe UI, sans-serif">Expert</text>
+      <circle cx="205" cy="100" r="46" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.5"/>
+      <path d="M188 100 l11 11 l22 -22" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
 
-  <section id="who-we-help">
-    <h2 class="section-title">Where We Pull You Out of the Current</h2>
-    <div class="section-underline"></div>
-    <div class="grid-3">
-      <div class="card">
-        <h3>Stuck Technical Deployments</h3>
-      <p>A launch that won't ship, a system that won't behave — get matched with someone who's fixed this exact problem before.</p>
-      </div>
-      <div class="card">
-        <h3>Broken Business Processes</h3>
-      <p>Too many opinions and no forward motion. We connect you with a specialist who cuts through the noise.</p>
-      </div>
-      <div class="card">
-        <h3>Stalled Product Launches</h3>
-      <p>Deals, approvals, or timelines stuck in someone else's queue. We help you get unstuck, fast.</p>
-      </div>
-    </div>
-  </section>
+<div class="band-quote">
+  "A riptide pulls you away from shore fast — and panic makes it worse. The way out isn't more thrashing.
+  It's calm, experienced guidance from someone who's swum this exact current before."
+</div>
 
-  <section id="how-it-works" style="background: var(--sand);">
-    <h2 class="section-title">How It Works</h2>
+<section id="who-we-help">
+  <h2 class="section-title">Where We Pull You Out of the Current</h2>
   <div class="section-underline"></div>
   <div class="grid-3">
-      <div class="card" style="background:#fff;">
-        <div class="step-number">1</div>
-        <h3>Submit Your Problem</h3>
+    <div class="card">
+      <h3>Stuck Technical Deployments</h3>
+      <p>A launch that won't ship, a system that won't behave — get matched with someone who's fixed this exact problem before.</p>
+      <div class="tag-row">
+        <span class="tag">CI/CD pipeline failures</span>
+        <span class="tag">Cloud database migrations</span>
+        <span class="tag">API integration blocks</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Broken Business Processes</h3>
+      <p>Too many opinions and no forward motion. We connect you with a specialist who cuts through the noise.</p>
+      <div class="tag-row">
+        <span class="tag">Operational bottlenecks</span>
+        <span class="tag">Cross-department handoff stalls</span>
+        <span class="tag">Unclear ownership</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Stalled Product Launches</h3>
+      <p>Deals, approvals, or timelines stuck in someone else's queue. We help you get unstuck, fast.</p>
+      <div class="tag-row">
+        <span class="tag">Vendor approval delays</span>
+        <span class="tag">Blocked go-to-market timelines</span>
+        <span class="tag">Stakeholder alignment gaps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" style="background: var(--sand);">
+  <h2 class="section-title">How It Works</h2>
+  <div class="section-underline"></div>
+  <p class="section-subtitle">Every engagement happens over a focused 30-minute video call or an async written review — whichever fits the problem best.</p>
+  <div class="grid-3">
+    <div class="card" style="background:#fff;">
+      <div class="step-number">1</div>
+      <h3>Submit Your Problem</h3>
       <p>Tell us where you're stuck — no forms, no fluff, just the real issue.</p>
     </div>
-      <div class="card" style="background:#fff;">
-        <div class="step-number">2</div>
-      <h3>Meet Your Verified Expert</h3>
-        <p>We match you with someone who has direct, proven experience solving it.</p>
-      </div>
     <div class="card" style="background:#fff;">
-        <div class="step-number">3</div>
-        <h3>Get the Fix</h3>
-        <p>Walk away with a tested path forward — not more theories.</p>
-      </div>
+      <div class="step-number">2</div>
+      <h3>Meet Your Verified Expert</h3>
+      <p>We match you with someone who has direct, proven experience solving it.</p>
     </div>
-  </section>
+    <div class="card" style="background:#fff;">
+      <div class="step-number">3</div>
+      <h3>Get the Fix</h3>
+      <p>Walk away with a tested path forward — not more theories.</p>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2 class="section-title">Verified Experts, Real Results</h2>
-    <div class="section-underline"></div>
+<section>
+  <h2 class="section-title">Verified Experts, Real Results</h2>
+  <div class="section-underline"></div>
+  <div class="badge-row">
+    <span class="badge">Verified 10+ Yr DevOps Engineers</span>
+    <span class="badge">Vetted Fractional Executives</span>
+    <span class="badge">Screened Product &amp; Ops Specialists</span>
+  </div>
   <div class="grid-3">
     <div class="testimonial">
-      <h4>Example Client — Engineering Lead</h4>
-      <p class="quote">"We were stuck for weeks. Our expert found the fix in a single call."</p>
-      </div>
-      <div class="testimonial">
-        <h4>Example Client — Founder</h4>
-      <p class="quote">"No guessing — just someone who had solved our exact problem before."</p>
-      </div>
-      <div class="testimonial">
-        <h4>Example Client — Ops Director</h4>
-        <p class="quote">"Our process was a black hole. Now it isn't."</p>
+      <h4>How a Pipeline Deployment Blocker Got Fixed in 45 Minutes</h4>
+      <p class="quote">A failing CI/CD pipeline was blocking a launch for days. A matched DevOps expert found the misconfigured build step on a single call and had the team shipping again the same afternoon.</p>
     </div>
+    <div class="testimonial">
+      <h4>Clearing a Cross-Team Handoff Bottleneck in One Session</h4>
+      <p class="quote">A recurring handback between two departments kept stalling projects for weeks. One working session with a vetted ops specialist made ownership clear and the backlog started moving.</p>
     </div>
-    <p class="placeholder-note" style="max-width:700px;margin:2rem auto 0;">
-    Placeholder testimonials — swap these in for real client feedback once you have it.
+    <div class="testimonial">
+      <h4>Unsticking a Stalled Vendor Approval in a Single Call</h4>
+      <p class="quote">A vendor sign-off had been stuck in review for over a month. A fractional exec who'd navigated the same approval chain before helped reframe the ask, and it was approved within days.</p>
+    </div>
+  </div>
+  <p class="placeholder-note" style="max-width:700px;margin:2rem auto 0;">
+    Illustrative examples — real client case studies will replace these as they come in.
   </p>
 </section>
 
 <section class="cta-band">
   <h2>Ready to Stop Fighting the Current?</h2>
   <p>Tell us where you're stuck. We'll match you with a verified expert who has solved it before, so you can stop thrashing and get back to shore.</p>
-  <a href="contact.html" class="btn btn-primary">Get Started</a>
+  <a href="#" onclick="openContactModal(event)" class="btn btn-primary">Get Unstuck Now</a>
 </section>
 
-  <footer>
+<footer>
   <p class="tagline">Riptide Life — calm, verified help for the moments you feel stuck.</p>
-    <p>&copy; 2026 Riptide Life. All Rights Reserved.</p>
+  <p>&copy; 2026 Riptide Life. All Rights Reserved.</p>
 </footer>
 
+<div class="modal-overlay" id="contactModal" onclick="if(event.target===this)closeContactModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeContactModal()" aria-label="Close">&times;</button>
+    <h2 class="section-title" style="font-size:1.5rem;">Tell Us Where You're Stuck</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label for="modal-name">Name</label>
+        <input type="text" id="modal-name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-email">Email</label>
+        <input type="email" id="modal-email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-message">Message</label>
+        <textarea id="modal-message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <p class="placeholder-note">This form is not yet connected to an email inbox — add your Formspree form ID to activate it.</p>
+  </div>
+</div>
+
+<script>
+function openContactModal(e) {
+  if (e) e.preventDefault();
+  document.getElementById('contactModal').classList.add('active');
+}
+function closeContactModal() {
+  document.getElementById('contactModal').classList.remove('active');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeContactModal();
+});
+</script>
+
 </body>
-  </html>
-  </html>
+</html>
