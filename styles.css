@@ -635,3 +635,17 @@ footer .tagline { font-style: italic; margin-bottom: 0.5rem; }
     color: var(--muted);
     font-size: 0.95rem;
 }
+
+.price-note {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 0.3rem;
+}
+
+.modal-subheader {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0.5rem 0 1.2rem;
+    line-height: 1.5;
+}
