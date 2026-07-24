@@ -649,3 +649,93 @@ footer .tagline { font-style: italic; margin-bottom: 0.5rem; }
     margin: 0.5rem 0 1.2rem;
     line-height: 1.5;
 }
+
+
+/* ===== Hero visual: ambient glow, bigger diagram, cascading light sweep ===== */
+.hero-visual { position: relative; overflow: hidden; }
+
+.hero-visual::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 122, 26, 0.55) 0%, rgba(255, 122, 26, 0.28) 38%, rgba(255, 122, 26, 0) 70%);
+    filter: blur(14px);
+    z-index: 0;
+    pointer-events: none;
+    animation: glowPulse 4.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+.hero-svg--lg {
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+}
+
+.flow-label {
+    font-size: 27px;
+    letter-spacing: 0.3px;
+    text-rendering: optimizeLegibility;
+    paint-order: stroke fill;
+    stroke: rgba(11, 61, 102, 0.35);
+    stroke-width: 0.6px;
+}
+
+.flow-line {
+    stroke-dasharray: 14 10;
+    filter: drop-shadow(0 0 6px rgba(255, 122, 26, 0.9)) drop-shadow(0 0 16px rgba(255, 122, 26, 0.5));
+    animation: flowDash 1s linear infinite, flowGlow 2.2s ease-in-out infinite;
+}
+
+.flow-line--1 { animation-delay: 0s, 0s; }
+.flow-line--2 { animation-delay: 0s, 0.5s; }
+
+@keyframes flowDash {
+    to { stroke-dashoffset: -48; }
+}
+
+@keyframes flowGlow {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 1; }
+}
+
+.flow-spark {
+    fill: #fff;
+    filter: drop-shadow(0 0 8px #ff7a1a) drop-shadow(0 0 16px rgba(255, 122, 26, 0.8));
+}
+
+.flow-spark--1 {
+    offset-path: path('M186,110 L234,110');
+    animation: sparkTravel 2.2s ease-in-out infinite;
+}
+
+.flow-spark--2 {
+    offset-path: path('M366,110 L414,110');
+    animation: sparkTravel 2.2s ease-in-out infinite;
+    animation-delay: 0.55s;
+}
+
+@keyframes sparkTravel {
+    0% { offset-distance: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-visual::after, .flow-line, .flow-spark { animation: none; }
+}
+
+@media (max-width: 768px) {
+    .hero-svg--lg { width: 92%; max-width: 380px; }
+    .flow-label { font-size: 24px; }
+}
