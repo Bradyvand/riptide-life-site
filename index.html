@@ -31,41 +31,51 @@
       </div>
   </div>
 <div class="hero-visual">
-  <svg class="hero-svg" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing a problem being matched to a battle-tested professional who delivers the fix">
-    
-    <!-- Connecting Dashed Lines -->
-    <line x1="186" y1="110" x2="234" y2="110" stroke="#ff7a1a" stroke-width="8" stroke-dasharray="12 10"/>
-    <line x1="366" y1="110" x2="414" y2="110" stroke="#ff7a1a" stroke-width="8" stroke-dasharray="12 10"/>
-    
-    <!-- Node 1: Your Issue -->
-    <circle cx="120" cy="110" r="66" fill="#ffffff"/>
-    <!-- Warning Triangle -->
-    <path d="M120,70 L155,130 L85,130 Z" fill="#0b3d66"/>
-    <!-- Warning Exclamation (Cutout) -->
-    <rect x="116" y="86" width="8" height="22" rx="4" fill="#ffffff"/>
-    <rect x="116" y="114" width="8" height="8" rx="4" fill="#ffffff"/>
-    
-    <!-- Node 2: Battle-Tested Professional -->
-    <circle cx="300" cy="110" r="66" fill="#ffffff"/>
-    <!-- Shield Icon -->
-    <path d="M300,75 L332,88 L332,118 C332,142 312,156 300,162 C288,156 268,142 268,118 L268,88 Z" fill="#0b3d66"/>
-    
-    <!-- Node 3: The Fix -->
-    <circle cx="480" cy="110" r="66" fill="#ff7a1a"/>
-    <!-- Checkmark -->
-    <path d="M455,115 L475,135 L510,90" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-    
-    <!-- Text Labels -->
-    <text x="120" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Your</text>
-    <text x="120" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Issue</text>
-    
-    <text x="300" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Battle-Tested</text>
-    <text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Professional</text>
-    
-    <text x="480" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">The</text>
-    <text x="480" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Fix</text>
-  </svg>
-</div>        
+  <div class="hero-steps">
+    <svg class="hero-svg" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing a problem being matched to a battle-tested professional who delivers the fix">
+      <line x1="186" y1="110" x2="234" y2="110" stroke="#ff7a1a" stroke-width="8" stroke-dasharray="12 10"/>
+      <line x1="366" y1="110" x2="414" y2="110" stroke="#ff7a1a" stroke-width="8" stroke-dasharray="12 10"/>
+      <circle cx="120" cy="110" r="66" fill="#ffffff"/>
+      <path d="M120,70 L155,130 L85,130 Z" fill="#0b3d66"/>
+      <rect x="116" y="86" width="8" height="22" rx="4" fill="#ffffff"/>
+      <rect x="116" y="114" width="8" height="8" rx="4" fill="#ffffff"/>
+      <circle cx="300" cy="110" r="66" fill="#ffffff"/>
+      <path d="M300,75 L332,88 L332,118 C332,142 312,156 300,162 C288,156 268,142 268,118 L268,88 Z" fill="#0b3d66"/>
+      <circle cx="480" cy="110" r="66" fill="#ff7a1a"/>
+      <path d="M455,115 L475,135 L510,90" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="120" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Your</text>
+      <text x="120" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Issue</text>
+      <text x="300" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Battle-Tested</text>
+      <text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Professional</text>
+      <text x="480" y="210" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">The</text>
+      <text x="480" y="240" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800" font-family="Segoe UI, sans-serif">Fix</text>
+    </svg>
+  </div>
+  <div class="hero-preview-card">
+    <div class="preview-card__header">
+      <span class="preview-card__status-dot"></span>
+      <span class="preview-card__status-text">Match Found</span>
+    </div>
+    <div class="preview-card__practitioner">
+      <div class="preview-card__avatar">DM</div>
+      <div class="preview-card__info">
+        <p class="preview-card__name">Dana M.</p>
+        <p class="preview-card__specialty">Former VP of Ops &middot; Supply Chain</p>
+      </div>
+      <span class="preview-card__rating">4.9 &#9733;</span>
+    </div>
+    <div class="preview-card__divider"></div>
+    <div class="preview-card__plan">
+      <p class="preview-card__plan-label">Async Action Plan</p>
+      <ul class="preview-card__plan-list">
+        <li><span class="dot dot--done"></span>Problem submitted</li>
+        <li><span class="dot dot--done"></span>Matched with a specialist</li>
+        <li><span class="dot dot--pending"></span>Action plan delivered</li>
+      </ul>
+    </div>
+    <a href="#how-it-works" class="preview-card__cta">See Sample Plan &rarr;</a>
+  </div>
+</div>
 </section>
 
 <div class="band-quote">
